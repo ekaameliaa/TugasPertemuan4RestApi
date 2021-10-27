@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class AnimalController extends Controller
 {
     #buat property animals
-    public $animals = ["Kucing", "Ayam", "Ikan"];
+    public $animals = ["Kucing", "Ayam", "Ikan"]; 
     
     function index()
     {
