@@ -17,20 +17,29 @@ use App\Http\Controllers\StudentController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+#Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+ #   return $request->user();
+#});
 #endpoint animals
-Route::get('/animals', [AnimalController::class, 'index']);
+#Route::get('/animals', [AnimalController::class, 'index']);
 
-Route::post('/animals', [AnimalController::class, 'store']);
+#Route::post('/animals', [AnimalController::class, 'store']);
 
-Route::put('/animals/{id}', [AnimalController::class, 'update']);
+#Route::put('/animals/{id}', [AnimalController::class, 'update']);
 
-Route::delete('/animals/{id}', [AnimalController::class, 'destroy']);
+#Route::delete('/animals/{id}', [AnimalController::class, 'destroy']);
 
 #Routing untuk student
-Route::get("/students", [StudentController::class, 'index']);
+Route::get('/students', [StudentController::class, 'index']);
 
+#Route post endpount student
+Route::post('/students', [StudentController::class, 'store']);
 
+#route get endpoint student
+Route::get('/students/{id}', [StudentController::class, 'show']);
 
+#Route put endpoint students
+Route::put('/students/{id}', [StudentController::class, 'update']);
+
+#Route delete endpoint student
+Route::delete('/students/{id}', [StudentController::class, 'destroy']);
